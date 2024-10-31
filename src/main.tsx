@@ -13,7 +13,7 @@ i18next.init({
   interpolation: {
       escapeValue: false,
   },
-  lng: localStorage.getItem('i18nextLng') || 'fr',
+  lng: localStorage.getItem('i18nextLng') || 'en',
   resources: {
       en: {
           global: global_en,
