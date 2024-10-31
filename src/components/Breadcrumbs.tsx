@@ -2,11 +2,6 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-type breadcrumb = {
-  name: string;
-  path: string;
-}
-
 export default function Breadcrumbs() {
   const [locale] = useTranslation("global");
   const breadcrumbs: breadcrumb[] = [

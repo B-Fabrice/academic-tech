@@ -8,5 +8,11 @@
   "webDesign": "Conception du site web",
   "limitedAccess": "Accès limité",
   "copyLink": "Copier le lien",
-  "linkCopied": "Lien copié"
+  "linkCopied": "Lien copié",
+  "allTasks": "Toutes les tâches",
+  "todo": "À faire",
+  "inProgress": "En cours",
+  "completed": "Terminé",
+  "filter_sort": "Filtrer & Trier",
+  "newTask": "Nouvelle tâche"
 }

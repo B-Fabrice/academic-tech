@@ -8,5 +8,11 @@
   "webDesign": "Website Design",
   "limitedAccess": "Limited Access",
   "copyLink": "Copy Link",
-  "linkCopied": "Link copied"
+  "linkCopied": "Link copied",
+  "allTasks": "All Tasks",
+  "todo": "To do",
+  "inProgress": "In Progress",
+  "completed": "Completed",
+  "filter_sort": "Filter & Sort",
+  "newTask": "New Task"
 }
