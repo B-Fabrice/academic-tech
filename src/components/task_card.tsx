@@ -4,7 +4,7 @@ import UserProfile from "./user_profile";
 export default function TaskCard({ task, category }: { task: Task, category?: TaskCategory }) {
   const avatarClass: string = "-ml-2 border border-white dark:border-graphite rounded-full";
   return (
-    <div className={`cursor-pointer rounded-2xl p-7 bg-white dark:bg-dark-bg ${task.banner && 'row-span-2'}`}>
+    <div className={`cursor-pointer rounded-2xl p-7 bg-white dark:bg-slate ${task.banner && 'row-span-2'}`}>
       <div className="flex justify-between items-center mb-5">
         <p className={`text-sm py-1 px-2 rounded-lg w-fit ${category?.textColor} ${category?.bgColor}`}>{category?.name}</p>
         <button>
