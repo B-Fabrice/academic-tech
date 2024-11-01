@@ -1,16 +1,27 @@
 import FormInput from "./form/input";
 import { useTheme } from "../use_theme";
-import { Bars3Icon, BellIcon, MagnifyingGlassIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, LanguageIcon, MagnifyingGlassIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 export default function Navbar({ setShowSidebar }: { setShowSidebar: React.Dispatch<React.SetStateAction<boolean>> }) {
   const { theme, setTheme } = useTheme();
-  const [locale] = useTranslation("global");
+  const [locale, i18n] = useTranslation("global");
+  const [language, setLanguage] = useState<string>(() => {
+    return localStorage.getItem('i18nextLng') || 'en';
+  });
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+    document.documentElement.lang = language;
   };
+
+  useEffect(() => {
+    localStorage.setItem('i18nextLng', language);
+    i18n.changeLanguage(language);
+    document.documentElement.lang = language;
+  }, [language, i18n]);
   return (
     <div className="flex items-center justify-between w-full px-3 sm:px-10 py-4 bg-white dark:bg-slate">
       <div className="w-8/12 max-w-60 max-sm:hidden">
@@ -30,6 +41,9 @@ export default function Navbar({ setShowSidebar }: { setShowSidebar: React.Dispa
         <button className="bg-slate/10 dark:bg-dark-bg w-8 h-8 p-[6px] rounded-lg relative">
           <BellIcon className="text-slate dark:text-soft-gray"/>
           <div className="absolute top-1 right-2 w-2 h-2 bg-red-500 rounded-full"></div>
+        </button>
+        <button onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')} className="bg-slate/10 dark:bg-dark-bg w-8 h-8 p-[6px] rounded-lg relative">
+          <LanguageIcon className="text-slate dark:text-soft-gray"/>
         </button>
         <button
           className="sm:hidden w-8 h-8 p-[6px] rounded-lg"
