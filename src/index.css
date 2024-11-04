@@ -5,6 +5,9 @@
 body {
   @apply bg-white-bg dark:bg-dark-bg;
 }
+.user-avatar {
+  @apply -ml-2 border border-white dark:border-graphite rounded-full;
+}
 * {
   @apply transition-colors duration-300 ease-in-out;
 }
