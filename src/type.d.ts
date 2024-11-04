@@ -28,3 +28,10 @@ type Task = {
   assignees: user[];
   banner?: string;
 }
+
+type Message = {
+  user: user,
+  date: Date,
+  message: string,
+  type: 'sent' | 'received',
+}

@@ -2,7 +2,6 @@ import { EllipsisVerticalIcon, ChatBubbleOvalLeftEllipsisIcon } from "@heroicons
 import UserProfile from "./user_profile";
 
 export default function TaskCard({ task, category }: { task: Task, category?: TaskCategory }) {
-  const avatarClass: string = "-ml-2 border border-white dark:border-graphite rounded-full";
   return (
     <div className={`cursor-pointer rounded-2xl p-7 bg-white dark:bg-slate ${task.banner && 'row-span-2'}`}>
       <div className="flex justify-between items-center mb-5">
@@ -17,8 +16,8 @@ export default function TaskCard({ task, category }: { task: Task, category?: Ta
       <div className="flex justify-between items-center mt-4 pt-4 border-t border-soft-gray dark:border-graphite">
         <div className="flex">
           <UserProfile path="/user1.jpg" />
-          <UserProfile path="/user2.jpg" customClass={avatarClass} />
-          <UserProfile path="/user3.jpg" customClass={avatarClass} />
+          <UserProfile path="/user2.jpg" customClass="user-avatar" />
+          <UserProfile path="/user3.jpg" customClass="user-avatar" />
         </div>
         <div className="flex gap-3 items-center">
           <ChatBubbleOvalLeftEllipsisIcon className="w-7 h-7 text-gray-400" />

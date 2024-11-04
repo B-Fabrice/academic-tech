@@ -14,5 +14,14 @@
   "inProgress": "In Progress",
   "completed": "Completed",
   "filter_sort": "Filter & Sort",
-  "newTask": "New Task"
+  "newTask": "New Task",
+  "projectOverview": "Project Overview",
+  "seeAll": "See All",
+  "timeline": "Timeline",
+  "aprToMay": "Apr 14 - May 7",
+  "team": "Team",
+  "status": "Status",
+  "teamChat": "Team Chat",
+  "date": "24 Apr 2023",
+  "yourMessages": "Your messages"
 }

@@ -5,6 +5,7 @@ import {PlayIcon } from "@heroicons/react/24/solid";
 import UserProfile from "../components/user_profile";
 import { useState } from "react";
 import TaskCard from "../components/task_card";
+import TaskDetails from "../components/project_overview";
 
 
 export default function Home() {
@@ -115,7 +116,7 @@ export default function Home() {
       setLinkCopied(false);
     }, 2000);
   };
-  const avatarClass: string = "-ml-2 border border-white dark:border-graphite rounded-full";
+
   return (
     <div className="px-3 sm:px-10 py-3 sm:py-10">
       <div className="flex items-start ms:items-center justify-between max-sm:flex-col gap-3">
@@ -143,9 +144,9 @@ export default function Home() {
           <div className="flex gap-4 pl-5 border-l border-soft-gray dark:border-graphite">
             <div className="flex">
               <UserProfile path="/user1.jpg"/>
-              <UserProfile path="/user2.jpg" customClass={avatarClass}/>
-              <UserProfile path="/user3.jpg" customClass={avatarClass}/>
-              <div className={`flex items-center justify-center w-9 h-9 relative rounded-full bg-gray-400 ${avatarClass}`}>
+              <UserProfile path="/user2.jpg" customClass='user-avatar'/>
+              <UserProfile path="/user3.jpg" customClass='user-avatar'/>
+              <div className='flex items-center justify-center w-9 h-9 relative rounded-full bg-gray-400 user-avatar'>
                 <p className="text-white text-sm">+2</p>
               </div>
             </div>
@@ -212,6 +213,7 @@ export default function Home() {
           return <TaskCard key={index} task={task} category={category} />
         })}
       </div>
+      <TaskDetails />
     </div>
   )
 }
